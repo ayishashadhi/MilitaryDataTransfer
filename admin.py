@@ -52,4 +52,18 @@ def view_soldiers():
     qry="select * from solider"
     ab=select(qry)
     data['view']=ab
+    print(data,"KKKKKKKKKKKKKKKKKKKKKK")
     return render_template("view_soldiers.html",data=data)
+
+@admin.route('/department_complaint')
+def department_complaint():
+    data={}
+    qry="select * from department_complaint"
+    ab=select(qry)
+    data['view']=ab
+    print(data,"KKKKKKKKKKKKKKKKKKKKKK")
+    return render_template("department_complaint.html",data=data)
+
+@admin.route('/admin_send_complaints_reply')
+def admin_send_complaints_reply():
+    return render_template("admin_send_complaints_reply.html")

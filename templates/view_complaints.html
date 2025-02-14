@@ -8,13 +8,18 @@
 <body>
     <table border="1" > 
         <tr>
-            <th>department name</th>
+            <th>complaint description</th>
+            <th>reply</th>
+            <th>date</th>
             
         </tr>
 
         {% for i in data['view']%}
         <tr>
-            <td>{{i['solider_name']}}</td>
+            <td>{{i['complaint_des']}}</td>
+            <td>{{i['reply']}}</td>
+            <td>{{i['date']}}</td>
+            <td><a href="admin_send_complaints_reply">send reply</a></td>
         </tr>
         {% endfor %}
 
